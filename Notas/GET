@@ -1,0 +1,25 @@
+A continuación veremos un trozo de código que contiene configuraciones muy básicas acerca del proyecto
+
+app = FastAPI() #Creación de la aplicación
+app.title = "Mi primera aplicación con FasAPI"
+app.version = "1.0.0"
+
+Usa el siguiente comando:
+app.title = "Mi primera aplicación con FasAPI"
+para asignar un titulo a la aplicación
+
+Usa el siguinte comando:
+app.version = "1.0.0"
+para designar que versión es
+
+---
+
+@app.get('/', tags=['home']) #mandas a root para que pueda llamar algo
+def home(): #Se crea la función que se llamara por parte de root
+  return "Section 0" #lo que hará la función
+
+@app.get('/home', tags=['home']) #mandas a root para que pueda llamar algo
+def home(): #Se crea la función que se llamara por parte de root
+  return "Section 1" #lo que hará la función
+  
+en los comandos anteriores podemos ver las rutas de los tags, siendo estos los directorios ded acceso a la app, vemos que en el primer pedazo de código empieza desde la raiz "/", siendo la "sección 1", mientras que el otro es "/home" siendo la "sección 2"

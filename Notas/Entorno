@@ -1,0 +1,62 @@
+Primero se debe colocar el entorno de trabajo dónde se instalaran todas las herramientas necesarias para el proyecto
+
+python3.11 -m venv venv #Con este comando en terminal creas un entorno
+source venv/bin/activate #Con este comando en terminal activas el entorno
+
+
+
+Despues de cargar el entorno, instalaremos lo necesario en ella.
+
+pip install fastapi uvicorn
+
+
+
+por ultimo, nos aseguramos de que nuestro editor de textos/IDE este correctamente asignado en el entorno
+
+python:seleccionar intérprete
+
+por ultimo selecciona el interprete similar a: ('venv':venv)
+
+---
+
+Comandos para inicializar el proyecto:
+
+uvicorn main:app
+
+esto correra con configuraciones por default el programa, pero si quisieramos personalizar las configuraciones, utiliza los siguientes comandos:
+
+--port 80 
+
+usa ese comando para cambiar el puerto por defecto
+
+--reload
+
+usa ese comando para recargar siempre la página
+
+--host 0.0.0.0 
+
+usa ese comando para que cualquier dispositivo tenga acceso libre a la aplicación
+
+comando completo:
+
+uvicorn main:app --host 0.0.0.0 --port 80 --reload
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
